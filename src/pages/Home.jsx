@@ -307,9 +307,9 @@ function Achievements() {
 
 /* ---- Teachers ---- */
 const teachersData = [
-  { name: 'Pradeep Pandey', role: 'Manager', img: 'assets/pradeep.png' },
-  { name: ' Vinod Tiwari', role: 'Principal (Senior Class)', img: 'assets/vinod.png' },
-  { name: 'Kirti Prakash Tripathi', role: 'Principal (Junior Class)',img: 'assets/kp.png' },
+  { name: 'Pradeep Pandey', role: 'Manager', img: 'assets/pradeep.jpg' },
+  { name: ' Vinod Tiwari', role: 'Principal (Senior Class)', img: 'assets/vinod.jpg' },
+  { name: 'Kirti Prakash Tripathi', role: 'Principal (Junior Class)',img: 'assets/kp.jpg' },
 ];
 
 function TeacherCard({ t, index }) {
