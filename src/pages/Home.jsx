@@ -247,14 +247,14 @@ function CampusTour() {
   return (
     <section className="py-24 bg-white">
       <div className="max-w-7xl mx-auto px-6">
-        <div ref={ref} className="relative rounded-[2.5rem] overflow-hidden aspect-[21/9] md:aspect-[21/8] bg-[#1E293B] group">
+        <div ref={ref} className="relative rounded-[2.5rem] overflow-hidden aspect-[4/5] sm:aspect-[16/9] md:aspect-[21/8] bg-[#1E293B] group">
           {playing ? (
             <video
               className="w-full h-full object-cover"
               controls
               autoPlay
               playsInline
-              poster="assets/360.jpg"
+              poster="https://images.unsplash.com/photo-1562774053-701939376533?auto=format&fit=crop&w=1600&q=80"
             >
               <source src="assets/videos/campus-tour.mp4" type="video/mp4" />
               Your browser does not support the video tag.
@@ -262,25 +262,25 @@ function CampusTour() {
           ) : (
             <>
               <img
-                src="assets/360.jpg"
+                src="https://images.unsplash.com/photo-1562774053-701939376533?auto=format&fit=crop&w=1600&q=80"
                 alt="Campus aerial view"
                 className="w-full h-full object-cover opacity-70 group-hover:opacity-60 transition-opacity duration-500 group-hover:scale-105"
                 loading="lazy"
                 decoding="async"
               />
-              <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-6">
+              <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-6 py-4">
                 <button
                   onClick={() => setPlaying(true)}
                   aria-label="Play campus tour video"
-                  className="relative w-20 h-20 md:w-24 md:h-24 mb-6 focus:outline-none"
+                  className="relative w-14 h-14 sm:w-20 sm:h-20 md:w-24 md:h-24 mb-3 sm:mb-6 focus:outline-none flex-shrink-0"
                 >
                   <span className="absolute inset-0 rounded-full bg-white/20 backdrop-blur animate-ping-ring" />
                   <span className="relative w-full h-full rounded-full bg-[#FFD43B] flex items-center justify-center shadow-xl">
-                    <svg className="w-8 h-8 md:w-10 md:h-10 text-[#1E293B] ml-1" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z" /></svg>
+                    <svg className="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 text-[#1E293B] ml-1" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z" /></svg>
                   </span>
                 </button>
-                <h3 className="text-white font-heading text-2xl md:text-4xl font-bold mb-2">360° Campus Tour</h3>
-                <p className="text-slate-300 max-w-md">Experience our lush green campus, modern labs & sports arenas from anywhere.</p>
+                <h3 className="text-white font-heading text-lg sm:text-2xl md:text-4xl font-bold mb-1 sm:mb-2">360° Campus Tour</h3>
+                <p className="text-slate-300 text-sm sm:text-base max-w-md">Experience our lush green campus, modern labs & sports arenas from anywhere.</p>
               </div>
             </>
           )}
