@@ -254,7 +254,7 @@ function CampusTour() {
               controls
               autoPlay
               playsInline
-              poster="https://images.unsplash.com/photo-1562774053-701939376533?auto=format&fit=crop&w=1600&q=80"
+              poster="assets/360.jpg"
             >
               <source src="assets/videos/campus-tour.mp4" type="video/mp4" />
               Your browser does not support the video tag.
@@ -262,7 +262,7 @@ function CampusTour() {
           ) : (
             <>
               <img
-                src="https://images.unsplash.com/photo-1562774053-701939376533?auto=format&fit=crop&w=1600&q=80"
+                src="assets/360.jpg"
                 alt="Campus aerial view"
                 className="w-full h-full object-cover opacity-70 group-hover:opacity-60 transition-opacity duration-500 group-hover:scale-105"
                 loading="lazy"
