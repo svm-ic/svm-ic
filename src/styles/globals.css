@@ -1,0 +1,77 @@
+/* src/styles/globals.css */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply font-body text-slate-800 bg-white antialiased;
+  }
+  *::selection {
+    background-color: #0B5ED7;
+    color: white;
+  }
+}
+
+@layer components {
+  .font-heading {
+    font-family: 'Poppins', sans-serif;
+  }
+  .font-body {
+    font-family: 'Inter', sans-serif;
+  }
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@layer utilities {
+  .animate-float-1 {
+    animation: float1 7s ease-in-out infinite;
+  }
+  .animate-float-2 {
+    animation: float2 8s ease-in-out infinite;
+  }
+  .animate-float-3 {
+    animation: float3 6s ease-in-out infinite;
+  }
+  .animate-bounce-slow {
+    animation: bounceSlow 2.5s infinite;
+  }
+  .animate-ping-ring {
+    animation: pingRing 1.5s cubic-bezier(0,0,.2,1) infinite;
+  }
+}
+
+@keyframes float1 {
+  0%, 100% { transform: translateY(0) rotate(0); }
+  50% { transform: translateY(-20px) rotate(2deg); }
+}
+@keyframes float2 {
+  0%, 100% { transform: translateY(0) rotate(0); }
+  50% { transform: translateY(-25px) rotate(-2deg); }
+}
+@keyframes float3 {
+  0%, 100% { transform: translateY(0) rotate(0); }
+  50% { transform: translateY(-15px) rotate(1deg); }
+}
+@keyframes bounceSlow {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(8px); }
+}
+@keyframes pingRing {
+  75%, 100% { transform: scale(1.5); opacity: 0; }
+}
+@keyframes loader {
+  from { width: 0%; }
+  to { width: 100%; }
+}
